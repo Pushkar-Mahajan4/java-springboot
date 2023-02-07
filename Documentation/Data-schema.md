@@ -18,12 +18,13 @@
 "technology": ["Java", "Javscript", "Springboot", "MongoDB", "NoSQL"]
 },
 
-    {
-        "_id":{"$oid":"63e0ee238014521555c0daa0"},
-        "description": "Support and create engaging/modern user experiences per stakeholder's specifications in the form of clean, W3C-compliant front-end code. Focusing on web-standards, semantics, usability, accessibility, and optimization, with special consideration given to code architecture, modularity, and reusability.",
-        "experience": "1",
-        "profile": "Frontend Developer",
-        "technology": ["HTML", "Javscript", "React", "Bootstrap", "JSON"]
-    }
+`
+{
+"\_id":{"$oid":"63e0ee238014521555c0daa0"},
+"description": "Support and create engaging/modern user experiences per stakeholder's specifications in the form of clean, W3C-compliant front-end code. Focusing on web-standards, semantics, usability, accessibility, and optimization, with special consideration given to code architecture, modularity, and reusability.",
+"experience": "1",
+"profile": "Frontend Developer",
+"technology": ["HTML", "Javscript", "React", "Bootstrap", "JSON"]
+}
 
 `
