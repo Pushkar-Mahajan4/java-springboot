@@ -1,4 +1,4 @@
-package com.pushkar.jobportal;
+package com.pushkar.jobportal.repository;
 
 import com.pushkar.jobportal.model.Post;
 import org.springframework.data.mongodb.repository.MongoRepository;

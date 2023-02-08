@@ -29,9 +29,5 @@
     "technology": ["HTML", "Javscript", "React", "Bootstrap", "JSON"]
 }
 
+``
 ```
-
-"description": "Design and develop software programs using Python for Quant Management team. Work extensively with algorithms and operations of software. Generate queries using a conditional join map within Data Layer",
-"experience": "3",
-"profile": "Python Developer",
-"technology": ["Python", "Javscript", "Pandas", "NumPy", "Data structures"]
