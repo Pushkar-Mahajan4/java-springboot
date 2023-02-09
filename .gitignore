@@ -1,1 +1,1 @@
-*.properties
+/jobportal/src/main/*.properties
