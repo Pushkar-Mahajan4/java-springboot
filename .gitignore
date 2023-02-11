@@ -1,1 +1,2 @@
 /jobportal/src/main/*.properties
+*.prettierignore
