@@ -46,18 +46,22 @@ const Main = () => {
             }}
           />
         </Grid>
-        <Grid
-          item
-          xs={12}
-          md={6}
-          lg={3}
-          justifyContent="center"
-          alignItems="center"
-        >
-          {userData.map((element, index) => {
-            return <CardBody {...element} key={index} />;
-          })}
-        </Grid>
+        {userData.map((element, index) => {
+          return (
+            <Grid
+              item
+              xs={12}
+              md={6}
+              lg={3}
+              justifyContent="center"
+              alignItems="center"
+              key={index}
+            >
+              <CardBody {...element} />
+            </Grid>
+          );
+        })}
+        {/* </Grid> */}
         {/* <Grid
           item
           xs={12}

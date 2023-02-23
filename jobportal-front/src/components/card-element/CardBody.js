@@ -2,7 +2,6 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 
 const CardBody = (props) => {
-  console.log(props);
   return (
     <Card
       sx={{
@@ -12,7 +11,11 @@ const CardBody = (props) => {
         margin: "10%",
       }}
     >
-      <CardContent>
+      <CardContent
+        sx={{
+          fontSize: "1.5rem",
+        }}
+      >
         <h3>{props.profile}</h3>
         <p>{props.description}</p>
       </CardContent>
