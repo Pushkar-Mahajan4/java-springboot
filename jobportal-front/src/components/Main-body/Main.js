@@ -1,8 +1,19 @@
 import { TextField, Grid } from "@mui/material";
 import CardBody from "../card-element/CardBody";
 import SearchIcon from "@mui/icons-material/Search";
+import { useEffect, useState } from "react";
 
 const Main = () => {
+  const [userData, setUserData] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8080/posts", {
+      mode: "cors",
+    })
+      .then((response) => response.json())
+      .then((data) => setUserData(data));
+  }, []);
+
   return (
     <>
       <Grid
@@ -40,13 +51,14 @@ const Main = () => {
           xs={12}
           md={6}
           lg={3}
-          sx={{ margin: "0", padding: "0" }}
           justifyContent="center"
           alignItems="center"
         >
-          <CardBody />
+          {userData.map((element, index) => {
+            return <CardBody {...element} key={index} />;
+          })}
         </Grid>
-        <Grid
+        {/* <Grid
           item
           xs={12}
           md={6}
@@ -78,7 +90,7 @@ const Main = () => {
           alignItems="center"
         >
           <CardBody />
-        </Grid>
+        </Grid> */}
       </Grid>
     </>
   );
