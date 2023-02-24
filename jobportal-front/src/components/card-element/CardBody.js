@@ -25,7 +25,7 @@ const CardBody = (props) => {
         }}
         xs={{ fontSize: "0.5rem" }}
       >
-        <Typography variant="h5" align="left">
+        <Typography variant="h5" align="left" sx={{ fontWeight: "bold" }}>
           <>{props.profile}</>
         </Typography>
         <Typography variant="subtitle2" gutterBottom align="left" mt={3}>
