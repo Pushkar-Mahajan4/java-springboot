@@ -23,14 +23,13 @@ const Main = () => {
         gap={2}
         justifyContent="center"
         alignItems="center"
-        // sx={{ padding: "0 150px" }}
       >
         <Grid item xs={12}>
           <TextField
-            xs={12}
             id="input-with-sx"
             label="Outlined"
             variant="outlined"
+            xs={{ width: "90%" }}
             sx={{
               width: "75%",
               ":focus": {
@@ -50,7 +49,7 @@ const Main = () => {
           return (
             <Grid
               item
-              xs={12}
+              xs={{ minWidth: "90%" }}
               md={6}
               lg={3}
               justifyContent="center"
@@ -61,40 +60,6 @@ const Main = () => {
             </Grid>
           );
         })}
-        {/* </Grid> */}
-        {/* <Grid
-          item
-          xs={12}
-          md={6}
-          lg={3}
-          sx={{ margin: "0", padding: "0" }}
-          justifyContent="center"
-          alignItems="center"
-        >
-          <CardBody />
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          md={6}
-          lg={3}
-          sx={{ margin: "0", padding: "0" }}
-          justifyContent="center"
-          alignItems="center"
-        >
-          <CardBody />
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          md={6}
-          lg={3}
-          sx={{ margin: "0", padding: "0" }}
-          justifyContent="center"
-          alignItems="center"
-        >
-          <CardBody />
-        </Grid> */}
       </Grid>
     </>
   );
