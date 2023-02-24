@@ -26,15 +26,13 @@ const CardBody = (props) => {
         xs={{ fontSize: "0.5rem" }}
       >
         <Typography variant="h5" align="left">
-          <h3>{props.profile}</h3>
+          <>{props.profile}</>
         </Typography>
-        <Typography variant="subtitle2" gutterBottom align="left">
-          <p>
-            <Box sx={{ fontWeight: "bold" }} display="inline">
-              Description:
-            </Box>{" "}
-            {props.description}
-          </p>
+        <Typography variant="subtitle2" gutterBottom align="left" mt={3}>
+          <Box component="span" sx={{ fontWeight: "bold" }}>
+            Description:{" "}
+          </Box>
+          {props.description}
         </Typography>
         <Typography
           variant="overline"
@@ -47,7 +45,7 @@ const CardBody = (props) => {
               Required Technology: {` `}{" "}
             </Box>
             {props.technology.map((element, index) => {
-              return <span key={index}>{element} , </span>;
+              return <span key={index}>{element}, </span>;
             })}
           </span>
         </Typography>

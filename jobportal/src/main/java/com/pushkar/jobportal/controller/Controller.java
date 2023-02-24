@@ -11,8 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:3000/")
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+
 public class Controller {
 
     @Autowired
@@ -21,17 +22,17 @@ public class Controller {
     @Autowired
     SearchRepository srepo;
 
-    @CrossOrigin("http://localhost:3000")
+    @CrossOrigin("http://localhost:3000/")
     @GetMapping("/posts")
 
     public List<Post> getAllPosts(){
         return repo.findAll();
     }
 
-    @CrossOrigin("http://localhost:3000")
-    @GetMapping("/posts/{text}")
 
-        public List<Post> search(@PathVariable String text) {
+    @GetMapping("/posts/{text}")
+    @CrossOrigin(origins = "http://localhost:3000/")
+    public List<Post> search(@PathVariable String text) {
         return srepo.findByText(text);
     }
 }

@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 const Main = () => {
   const [userData, setUserData] = useState([]);
+  const [query, setQuery] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:8080/posts", {
@@ -12,7 +13,13 @@ const Main = () => {
     })
       .then((response) => response.json())
       .then((data) => setUserData(data));
-  }, []);
+
+    // fetch(`http://localhost:8080/posts/${query}`, {
+    //   mode: "cors",
+    // })
+    //   .then((response) => response.json())
+    //   .then((data) => setUserData(data));
+  }, [query]);
 
   return (
     <>
@@ -43,13 +50,13 @@ const Main = () => {
                 ></SearchIcon>
               ),
             }}
+            onChange={(e) => setQuery(e.target.value)}
           />
         </Grid>
         {userData.map((element, index) => {
           return (
             <Grid
               item
-              xs={{ minWidth: "90%" }}
               md={6}
               lg={3}
               justifyContent="center"
