@@ -8,17 +8,29 @@ const Main = () => {
   const [query, setQuery] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/posts", {
-      mode: "cors",
-    })
-      .then((response) => response.json())
-      .then((data) => setUserData(data));
+    const initialFetch = async () => {
+      try {
+        fetch("http://localhost:8080/posts", {
+          mode: "cors",
+        })
+          .then((response) => response.json())
+          .then((data) => setUserData(data));
+      } catch (error) {
+        console.log(error);
+      }
+    };
 
-    // fetch(`http://localhost:8080/posts/${query}`, {
-    //   mode: "cors",
-    // })
-    //   .then((response) => response.json())
-    //   .then((data) => setUserData(data));
+    const searchFetch = async () => {
+      try {
+        fetch(`http://localhost:8080/posts/${query}`)
+          .then((response) => response.json())
+          .then((data) => setUserData(data));
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    query.length === 0 ? initialFetch() : searchFetch();
   }, [query]);
 
   return (
@@ -31,14 +43,16 @@ const Main = () => {
         justifyContent="center"
         alignItems="center"
       >
-        <Grid item xs={12}>
+        <Grid item xs={12} margin={4}>
           <TextField
             id="input-with-sx"
-            label="Outlined"
+            label="Search"
             variant="outlined"
-            xs={{ width: "90%" }}
+            lg={12}
+            xs={12}
             sx={{
-              width: "75%",
+              width: { xs: "115%", lg: "75%" },
+              marginRight: { xs: "10px" },
               ":focus": {
                 border: "00838f",
               },

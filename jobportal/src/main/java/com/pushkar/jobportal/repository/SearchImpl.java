@@ -28,6 +28,7 @@ public class SearchImpl implements SearchRepository{
 
     @Override
     public List<Post> findByText(String text) {
+
         final List<Post> posts = new ArrayList<>();
         MongoDatabase database = client.getDatabase("jobportal");
         MongoCollection<Document> collection = database.getCollection("jobposts");

@@ -22,7 +22,7 @@ public class Controller {
     @Autowired
     SearchRepository srepo;
 
-    @CrossOrigin("http://localhost:3000/")
+    @CrossOrigin("http://localhost:3000")
     @GetMapping("/posts")
 
     public List<Post> getAllPosts(){
@@ -30,8 +30,10 @@ public class Controller {
     }
 
 
+    @CrossOrigin("http://localhost:3000")
     @GetMapping("/posts/{text}")
-    @CrossOrigin(origins = "http://localhost:3000/")
+
+
     public List<Post> search(@PathVariable String text) {
         return srepo.findByText(text);
     }
