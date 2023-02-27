@@ -12,3 +12,13 @@ For Database I have used MongoDB as it provides me with a NOSQL Database and I c
 The search feature enables users to search job postings using keywords that are matched against the Job's description, technology, or the profile.
 
 ![App dashboard](/Documentation/Screenshots/Project_1.png)
+
+## Search Feature: 
+
+![App search feature](/Documentation/Screenshots/Project_search.png)
+
+
+
+## Mobile View: 
+
+![App mobile view](/Documentation/Screenshots/Project_mobile.png)
