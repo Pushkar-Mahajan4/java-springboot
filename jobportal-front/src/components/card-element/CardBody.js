@@ -8,7 +8,7 @@ const CardBody = (props) => {
       xs={12}
       md={2}
       sx={{
-        background: "grey",
+        background: "white",
         padding: "2%",
         paddingBottom: "45px",
         overflow: "hidden",
@@ -17,7 +17,6 @@ const CardBody = (props) => {
         margin: "10%",
         marginRight: { xs: "4.6rem" },
       }}
-      rowSpacing={{ xs: "1" }}
     >
       <CardContent
         sx={{
