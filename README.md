@@ -10,3 +10,5 @@ In the backend, the portal is powered by Java Springboot, providing a robust and
 
 For Database I have used MongoDB as it provides me with a NOSQL Database and I can make use of search features powered by the query aggregation pipeline provided by MongoDB.
 The search feature enables users to search job postings using keywords that are matched against the Job's description, technology, or the profile.
+
+![App dashboard] (./job-portal/Documentation/Screenshots/Project 1.png)
